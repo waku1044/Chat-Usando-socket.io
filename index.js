@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const cors = require('cors');
 
 
 // Configuraciones
 app.set("port", process.env.PORT || 3000);
+
+app.use(cors());
 
 // Ruta estatica
 app.use(express.static(path.join(__dirname, "public")));
