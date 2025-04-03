@@ -19,12 +19,10 @@ const server = app.listen(app.get("port"), () => {
 
 
 // Configuracion con Socket.io
-const socketIo = require("socket.io");
-
 
 const io = require('socket.io')(server, {
     cors: {
-      origin: "https://chat-usando-socket-io.vercel.app/", // El dominio de tu cliente
+      origin: "https://chat-usando-socket-io.vercel.app", // El dominio de tu cliente
       methods: ["GET", "POST"]
     }
   });
